@@ -10,11 +10,22 @@ export interface IUser{
 			highProtein: boolean
 		}
 }
+
 export interface IStored{
     login: boolean,
     user: IUser
 }
+
 export interface ILogin{
     username:string,
     password:string
+}
+
+export interface IProduct{
+    name: string,
+	kcal: number,
+	prot: number,
+	carbo: number,
+	fats: number,
+	tags: string[]
 }

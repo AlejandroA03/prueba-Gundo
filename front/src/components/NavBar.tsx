@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import logo from "../../public/logo.jpg";
 
 const links = [
-  { name: "productos", text: "Productos", href: "/productos" },
+  { name: "products", text: "Productos", href: "/products" },
   { name: "login", text: "Iniciar sesión", href: "/login" },
 ];
 
@@ -17,14 +17,14 @@ const NavBar: React.FC = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const storedUser = localStorage.getItem("user");
+    const storedUser = localStorage.getItem("storedUser");
     if (storedUser) {
       setUser(JSON.parse(storedUser));
     }
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem("user");
+    localStorage.removeItem("storedUser");
     setUser(null);
     router.push("/login");
   };
