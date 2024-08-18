@@ -8,7 +8,7 @@ module.exports = {
             if (!user) {
                 return res.status(401).json({ message: "Credenciales invalidas" });
             }
-            return res.json({ message: "Ingreso exitoso.", user });
+            return res.json({ login: true, user });
         } catch (error) {
             return res.status(500).json({ message: "Internal server error", error: error.message });
         }
