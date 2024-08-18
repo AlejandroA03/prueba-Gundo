@@ -58,11 +58,11 @@ module.exports = {
     
             const response = recommendedProducts.map(product => {
                 let reason = '';
-                if (product.tags.includes('Alto en proteínas')) reason += 'High in protein. ';
-                if (product.tags.includes('Vitamina C')) reason += 'Rich in Vitamin C. ';
+                if (product.tags.includes('Alto en proteínas')) reason += 'Alto en proteínas. ';
+                if (product.tags.includes('Vitamina C')) reason += 'Rico en Vitamina C. ';
                 return {
                     product,
-                    reason: reason.trim() || 'General recommendation'
+                    reason: reason.trim() || 'Recomendacion general.'
                 };
             });
     

@@ -29,3 +29,19 @@ export interface IProduct{
 	fats: number,
 	tags: string[]
 }
+
+export interface IRecommendation {
+    nutrient: string;
+    recommended_foods?: string[];
+    avoid_foods?: string[];
+}
+
+export interface IUserRecommendation {
+    user_id: number;
+    recommendations: IRecommendation[];
+}
+
+export interface IRecommendProduct{
+    product: IProduct,
+    reason: string
+}
